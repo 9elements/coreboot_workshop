@@ -22,5 +22,6 @@ DefinitionBlock(
 		#include <soc/intel/alderlake/acpi/tcss.asl>
 	}
 
+	External (FBCL, MethodObj)
 	#include <southbridge/intel/common/acpi/sleepstates.asl>
 }

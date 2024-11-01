@@ -109,6 +109,7 @@ Device (RP01)
 
 	Method (_PRT)
 	{
+		FBCL()
 		Return (IRQM (RPPN))
 	}
 }
