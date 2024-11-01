@@ -23,6 +23,9 @@ config MAINBOARD_DIR
 config MAINBOARD_PART_NUMBER
 	default "ODROID-H4"
 
+config FMDFILE
+	default "src/mainboard/\$(CONFIG_MAINBOARD_DIR)/flash.fmd"
+
 config ODROID_H4_ENABLE_SAGV
 	bool "Enable SAGV"
 	default y
