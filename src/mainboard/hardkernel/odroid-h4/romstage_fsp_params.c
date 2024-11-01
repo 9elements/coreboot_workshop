@@ -3,6 +3,7 @@
 #include <fsp/api.h>
 #include <soc/romstage.h>
 #include <soc/meminit.h>
+#include <console/console.h>
 
 static const struct mb_cfg ddr5_mem_config = {
 	.type = MEM_TYPE_DDR5,
@@ -22,4 +23,7 @@ void mainboard_memory_init_params(FSPM_UPD *memupd)
 {
 	const bool half_populated = true;
 	memcfg_init(memupd, &ddr5_mem_config, &dimm_module_spd_info, half_populated);
+
+	if (CONFIG(NO_UART_ON_SUPERIO))
+		printk(BIOS_EMERG, "UART is disabled. Who needs serial output anyway...\n");
 }
