@@ -114,7 +114,7 @@ chip soc/intel/alderlake
 				.fall_time_ns = 110,
 			}"
 		end
-		device ref emmc on
+		device ref emmc off
 			register "emmc_enable_hs400_mode" = "true"
 		end
 		device ref pcie_rp3 on	# LAN1
